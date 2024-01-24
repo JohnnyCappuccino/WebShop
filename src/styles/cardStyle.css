@@ -1,0 +1,103 @@
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.parentMain{
+  display: flex;
+  margin-top: 90px;
+  gap: 50px;
+  overflow: hidden; 
+}
+
+
+.sideBar{
+  width:150px;
+  flex: 1 0 10%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a252e;
+  justify-content: space-between;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
+}
+
+.sideBar>:first-child{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding:20px;
+}
+
+.sideBar>:first-child>*{
+  text-align: center;
+  color: white;
+  font-size:large;
+  padding-bottom:2px; 
+  background: linear-gradient(white,white) center bottom;
+  background-size: 0% 2px;
+  background-repeat:no-repeat;
+  transition: all 0.45s;
+}
+
+.sideBar>:first-child>*:hover{
+  background-size: 100% 2px;
+}
+
+.profile{
+  height: 50px;
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #345067;
+}
+
+.profile>img{
+  width:30px;
+  height: 30px;
+}
+
+.card{
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #1a252e;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card *{
+  transition: 0.3s;
+  color: white;
+}
+
+.card:hover *{
+  color:rgb(80, 80, 255);
+}
+
+.card>:first-child>:last-child{
+  padding:20px;
+}
+
+.imgContainer{
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: fill;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cost{
+  display: flex;
+  justify-content:space-between;
+}

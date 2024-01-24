@@ -1,0 +1,51 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: system-ui, 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+  color: #010B13;
+}
+
+html{
+  background-color:white;
+}
+
+.Header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.bag{
+  width: 35px;
+  height: 35px;
+}
+.smallHeader{
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  text-align: center;
+  gap: 20px;
+  height: 90px;
+  background-color: #010B13;
+  position: fixed;
+  transition: 0.5s;
+}
+
+.smallHeader>*{
+  color: white;
+  font-size:large;
+  font-style: bold;
+  padding-bottom:2px; 
+  background: linear-gradient(white,white) center bottom;
+  background-size: 0% 2px;
+  background-repeat:no-repeat;
+  transition: all 0.45s;
+}
+
+.smallHeader>*:hover{
+  background-size: 100% 2px;
+}
