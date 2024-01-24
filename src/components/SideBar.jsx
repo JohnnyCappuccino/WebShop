@@ -12,7 +12,7 @@ function SideBar({onClick}){
         <Link to="cart" onClick={() => onClick("")}>Best-Sellers</Link>
       </div>
       <div className="profile">
-        <img src="/src/images/profile.png" alt="" />
+        <img src="/public/images/profile.png" alt="" />
         <p>account</p>
       </div>
     </div>
