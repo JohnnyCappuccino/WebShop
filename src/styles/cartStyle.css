@@ -19,7 +19,7 @@
 }
 
 .simpleCart>button{
-  background-image: url("/src/images/x-mark.png");
+  background-image: url("/public/images/x-mark.png");
   height: 50px;
   width: 50px;
   background-position: center;
