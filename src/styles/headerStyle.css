@@ -3,11 +3,12 @@
   padding: 0px;
   text-decoration: none;
   font-family: system-ui, 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
-  color: #010B13;
+  color: white;
 }
 
-html{
-  background-color:white;
+html,#root{
+  background-color: #1a252e;
+  height: 100vh;
 }
 
 .Header{

@@ -12,7 +12,6 @@ const ProductPage = () => {
     const array = data.shoppingCart;
     if(array.includes(newItem)){
       const newAmmount = Number(array[array.indexOf(newItem)].ammount) + Number(ammount);
-      console.log(typeof newAmmount);
       array[array.indexOf(newItem)]["ammount"] = newAmmount;
     }
     else{
@@ -42,11 +41,11 @@ const ProductPage = () => {
         <p>{location.state.product.description}</p>
         <div>
           <p>{location.state.product.rating}</p>
-          <div class="star"></div>
+          <div className="star"></div>
         </div>
         <div>
           <label htmlFor="quantity">Quantity: </label>
-          <input type="number" id="quantity" min="1" defaultValue={1} onChange={(e) => {ammount =e.target.value ; console.log(ammount)}}/>
+          <input type="number" id="quantity" min="1" defaultValue={1} onChange={(e) => {ammount =e.target.value;}}/>
         </div>
         <button onClick={() => AddItem(location.state.product, ammount)}>Add to cart</button>
       </div>

@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 3px solid #1a252e;
+  border: 3px solid #009dff;
   border-radius: 10px;
   width: 100%;
 }
@@ -19,7 +19,7 @@
 }
 
 .simpleCart>button{
-  background-image: url("/public/images/x-mark.png");
+  background-image: url("/public/images/remove.png");
   height: 50px;
   width: 50px;
   background-position: center;
@@ -56,15 +56,16 @@
 .checkout,
 .keepShoping{
   border-radius: 30px;
-  border: 1px solid #010B13;
+  border: 1px solid #009dff;
   background-color: white;
-  box-shadow: #010B13 5px 5px 0px;
+  box-shadow: #009dff 5px 5px 0px;
   transition: 0.1s;
+  color: black;
 }
 
 .checkout:hover,
 .keepShoping:hover{
-  box-shadow: #010B13 10px 10px 0px;
+  box-shadow: #009dff 10px 10px 0px;
 }
 
 .checkout:active,

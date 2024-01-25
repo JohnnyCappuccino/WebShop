@@ -48,9 +48,9 @@ function Header({title}){
   return(
     <header className="Header">
       <div className="smallHeader" style={{top: smallHeaderStyle}}>
-        <Link to="/all" state={{id:"23"}}>Shop name</Link>
+        <Link to="/">Shop name</Link>
         <h1>{title}</h1>
-        <Link to="cart" state={{cart:"hello"}}><img src="/public/images/bag.png" alt="cart" className="bag"></img></Link>
+        <Link to="cart"><img src="/images/bag.png" alt="cart" className="bag"></img></Link>
       </div>
     </header>
   )

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Outlet,useLocation  } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import React from "react";
 import Header from './components/Header';
 import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
 
 const getData = () => {
   const [data, setData] = useState(null);
@@ -10,7 +11,6 @@ const getData = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
     fetch('https://dummyjson.com/products', { mode: "cors" })
       .then((response) => {return response.json()})
       .then((response) => setData(response))
@@ -21,7 +21,7 @@ const getData = () => {
   return { data, error, loading };
 }
 
-const App = () => {
+function App(){
   const { data, error, loading } = getData();
   
   const [shoppingCart,setShoppingCart] = useState([]);
@@ -42,6 +42,7 @@ const App = () => {
           <Outlet context={{data,shoppingCart,setShoppingCart}}/>
           </div>
         </div>
+        <Footer/>
     </>
   );
 };

@@ -9,11 +9,7 @@ function SideBar({onClick}){
         <Link to="tech" onClick={() => onClick("Technology")}>Tech</Link>
         <Link to="life-style" onClick={() => onClick("Life-Style")}>Life-Style</Link>
         <Link to="groceries" onClick={() => onClick("Groceries")}>Groceries</Link>
-        <Link to="cart" onClick={() => onClick("")}>Best-Sellers</Link>
-      </div>
-      <div className="profile">
-        <img src="/public/images/profile.png" alt="" />
-        <p>account</p>
+        <Link to="tech" onClick={() => onClick("Best-Sellers")}>Best-Sellers</Link>
       </div>
     </div>
   )
