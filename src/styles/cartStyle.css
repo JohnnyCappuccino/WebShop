@@ -61,6 +61,7 @@
   box-shadow: #009dff 5px 5px 0px;
   transition: 0.1s;
   color: black;
+  text-align: center;
 }
 
 .checkout:hover,

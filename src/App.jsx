@@ -25,10 +25,23 @@ function App(){
   const { data, error, loading } = getData();
   
   const [shoppingCart,setShoppingCart] = useState([]);
-  const [title, setTitle] = useState("All");
+  const [title, setTitle] = useState("");
 
   const changeTitle = (newTitle) =>{
     setTitle(newTitle);
+  }
+
+  const AddItem = (newItem, ammount) =>{
+    const array = shoppingCart;
+    if(array.includes(newItem)){
+      const newAmmount = Number(array[array.indexOf(newItem)].ammount) + Number(ammount);
+      array[array.indexOf(newItem)]["ammount"] = newAmmount;
+    }
+    else{
+      Object.assign(newItem, {ammount:ammount});
+      array.push(newItem);
+    }
+    setShoppingCart(array);
   }
 
   if (error) return <p>A network error was encountered</p>;
@@ -37,9 +50,9 @@ function App(){
     <>
       <Header title={title}/>
         <div className="parentMain">
-          <SideBar onClick={changeTitle}/>
+          <SideBar onClick={changeTitle} />
           <div className="main">
-          <Outlet context={{data,shoppingCart,setShoppingCart}}/>
+          <Outlet context={{data,shoppingCart,AddItem,changeTitle,setShoppingCart}}/>
           </div>
         </div>
         <Footer/>

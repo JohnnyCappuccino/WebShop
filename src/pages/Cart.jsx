@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext,Link } from "react-router-dom";
 import React, { useMemo } from "react";
 import SimpleCartItem from "../components/SimpleCartItem";
 
@@ -29,7 +29,13 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h1 className="cartTitle">YOUR CART</h1>
+      {data.shoppingCart.length <= 0 && <div className="cart">
+        <h1 className="cartTitle">YOUR CART IS EMPTY</h1>
+        <Link to="/all" className="checkout" onClick={() => data.changeTitle("All Products")}>SHOP NOW</Link>
+        </div>}
+
+      {data.shoppingCart.length > 0 && <div className="cart">
+    <h1 className="cartTitle">YOUR CART</h1>
       <div>
         <div className="items">
         {data.shoppingCart.map((product, index) =>
@@ -41,6 +47,7 @@ const Cart = () => {
           <button className="keepShoping">KEEP SHOPING</button>
         </div>
       </div>
+    </div>}
     </div>
   )
 };

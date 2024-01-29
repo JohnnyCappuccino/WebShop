@@ -4,7 +4,7 @@ function Footer(){
   return(
   <footer className="footer">
     <div className="footer-col">
-      <h4>company</h4>
+      <h4>Shopster</h4>
       <ul>
         <li>about us</li>
         <li>our services</li>

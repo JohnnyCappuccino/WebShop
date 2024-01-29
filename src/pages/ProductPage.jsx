@@ -8,19 +8,6 @@ const ProductPage = () => {
   const data = useOutletContext();
   const [mainImg,setMainImg] = useState(location.state.product.thumbnail)
 
-  const AddItem = (newItem, ammount) =>{
-    const array = data.shoppingCart;
-    if(array.includes(newItem)){
-      const newAmmount = Number(array[array.indexOf(newItem)].ammount) + Number(ammount);
-      array[array.indexOf(newItem)]["ammount"] = newAmmount;
-    }
-    else{
-      Object.assign(newItem, {ammount:ammount});
-      array.push(newItem);
-      data.setShoppingCart(array);
-    }
-  }
-
   const changeMainImg = (img) =>{
     setMainImg(img);
   }
@@ -47,7 +34,7 @@ const ProductPage = () => {
           <label htmlFor="quantity">Quantity: </label>
           <input type="number" id="quantity" min="1" defaultValue={1} onChange={(e) => {ammount =e.target.value;}}/>
         </div>
-        <button onClick={() => AddItem(location.state.product, ammount)}>Add to cart</button>
+        <button onClick={() => data.AddItem(location.state.product, ammount)}>Add to cart</button>
       </div>
     </div>
     </>

@@ -37,7 +37,6 @@ function Header({title}){
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDir]);
 
-
   if(scrollDir === "scrolling up"){
     smallHeaderStyle= "0px";
   }
@@ -48,7 +47,7 @@ function Header({title}){
   return(
     <header className="Header">
       <div className="smallHeader" style={{top: smallHeaderStyle}}>
-        <Link to="/">Shop name</Link>
+        <Link to="/">Shopster</Link>
         <h1>{title}</h1>
         <Link to="cart"><img src="/images/bag.png" alt="cart" className="bag"></img></Link>
       </div>
